@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+  @IBOutlet weak var redCorvetteImage: UIImageView!
+  @IBOutlet weak var blueFerrariImage: UIImageView!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
@@ -21,5 +24,14 @@ class ViewController: UIViewController {
   }
 
 
+  @IBAction func hideCorvetteButton(sender: AnyObject) {
+    redCorvetteImage.hidden = true
+    blueFerrariImage.hidden = false
+  }
+
+  @IBAction func hideFerrariButton(sender: AnyObject) {
+    blueFerrariImage.hidden = true
+    redCorvetteImage.hidden = false
+  }
 }
 
